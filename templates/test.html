@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Этапы ремонта оборудования</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .stage {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 0.5s forwards;
+        }
+        .stage:not(:first-child) {
+            animation-delay: 0.5s;
+        }
+        .stage_1 {
+            position: relative;
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            top: 300px;
+            left: -50%;
+            margin: 10px;
+            padding: 20px;
+            width: 150px;
+            height: 150px;
+            display: grid;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+        }
+        .stage_1:not(:first-child) {
+            animation-delay: 0.5s;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .stage-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .stage-title_1 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 60px;
+            line-height: 1;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .stage-title_2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 25px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .stage-description {
+            font-size: 1em;
+            color: #666;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .stage, .stage_1 {
+                width: 100px;
+                height: 100px;
+                padding: 10px;
+            }
+            .stage-title, .stage-title_1, .stage-title_2 {
+                font-size: 1.5em;
+            }
+            .stage-description {
+                font-size: 0.8em;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                flex-direction: column;
+                align-items: center;
+            }
+            .stage, .stage_1 {
+                width: 80px;
+                height: 80px;
+                padding: 5px;
+            }
+            .stage-title, .stage-title_1, .stage-title_2 {
+                font-size: 1.2em;
+            }
+            .stage-description {
+                font-size: 0.7em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="stage-title_1">01</div>
+        <div class="stage-description">Подача заявки</div>
+    </div>
+    <div class="stage">
+        <div class="stage-title">02</div>
+        <div class="stage-description">Звонок нашего сотрудника для уточнения информации</div>
+    </div>
+    <div class="stage">
+        <div class="stage-title_2">03</div>
+        <div class="stage-description">Подготовка к ремонту оборудования</div>
+    </div>
+    <div class="stage_1">
+        <div class="stage-title_1">04</div>
+        <div class="stage-description">Ремонт техники</div>
+    </div>
+    <div class="stage_1">
+        <div class="stage-title_2">05</div>
+        <div class="stage-description">Готовое отремонтированное оборудование</div>
+    </div>
+</body>
+</html>

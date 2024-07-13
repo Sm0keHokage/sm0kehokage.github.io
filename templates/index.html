@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+  <title>ВТК</title>
+  <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="main_page">
+  <div class="logo-container">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" class="image">
+    <div class="box">
+      <div class="button_first" onclick="scrollToTarget()">
+        <span>О нас</span>
+      </div>
+      <div class="button_second" onclick="scrollToTarget()">
+        <span>Заказать услуги</span>
+      </div>
+      <div class="button_third">
+        <span>Наши соцсети</span>
+      </div>
+      <div class="button_fourth" onclick="scrollToModal()">
+        <span>Пример наших работ</span>
+      </div>
+      <div class="button_fifth" onclick="scrollToStages()">
+        <span>Этапы работы</span>
+      </div>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/scroll_to_info_about_company.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/open_order_acceptance_with_btn.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/open_new_site.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/scroll_to_stages_of_work.js') }}" defer></script>
+  <script src="{{ url_for('static', filename='js/scroll_to_modal.js') }}" defer></script>
+  <div class="all_fon">
+  <div class="container_info_about_company">
+    <div class="info_about_company">
+      <br>
+      <h1>Мы рады представить вам нашу компанию</h1>
+      <br>
+            <div class="info"><p>Мы рады представить вам нашу компанию, специализирующуюся на выполнении ряда ремонтных работ и доработок. ВТК - это команда профессионалов с более чем 15-летним опытом работы, готовая предложить вам высококачественные услуги по доступным ценам.</p></div>
+            <div class="second_fon">
+            <h2>Наши основные направления:</h2>
+            <ul>
+                <p>&#10004; Плунжерные насосы СИН</p>
+                <p>&#10004; Агрегаты для кислотной обработки СИН32</p>
+                <p>&#10004; Цементирование скважин СИН35, ЦА320</p>
+            </ul>
+            <div class="info_two"><p>Мы располагаем удобным помещением и конструкторским отделом, что позволяет нам быстро и качественно выполнять задачи любой сложности. Наши специалисты обладают высоким уровнем профессионализма и готовы предложить вам лучшие решения для ваших потребностей.</p></div>
+
+            <h2>Почему выбирают нас:</h2>
+            <ul>
+                <p>&#10004; Высокое качество работ</p>
+                <p>&#10004; Быстрое выполнение задач</p>
+                <p>&#10004; Доступные цены</p>
+                <p>&#10004; Профессиональный штат специалистов</p>
+            </ul>
+
+            <div class="info_three"><p>Благодаря нашим достоинствам, мы уверены, что сможем удовлетворить все ваши ожидания и потребности. Обращайтесь к нам, и мы поможем вам решить любые задачи в кратчайшие сроки.</p></div>
+    </div>
+      </div>
+  </div>
+  <div class="fon_slider">
+  <div class="slider">
+    <div class="slides">
+      <div class="slide"><img src="{{ url_for('static', filename='img/first.jpg') }}"  alt="Изображение 1"></div>
+      <div class="slide"><img src="{{ url_for('static', filename='img/second.jpg') }}" alt="Изображение 2"></div>
+      <div class="slide"><img src="{{ url_for('static', filename='img/third.jpg') }}" alt="Изображение 2"></div>
+      <div class="slide"><img src="{{ url_for('static', filename='img/fourth.jpg') }}" alt="Изображение 2"></div>
+      <div class="slide"><img src="{{ url_for('static', filename='img/fifth.jpg') }}" alt="Изображение 2"></div>
+    </div>
+    <div class="buttons">
+      <button onclick="leftClick()" class="prev"><img src="{{ url_for('static', filename='img/arrow_left.png') }}"></button>
+      <button onclick="rightClick()" class="next"><img src="{{ url_for('static', filename='img/arrow_right.png') }}"></button>
+    </div>
+  </div>
+    </div>
+  <script src="{{ url_for('static', filename='js/slider.js') }}" defer></script>
+    <div class="stages_of_work">Этапы работы</div>
+  <div class="stages">
+    <div class="stage">
+        <div class="stage-title_1">01</div>
+        <div class="stage-description">Подача заявки</div>
+    </div>
+    <div class="stage">
+        <div class="stage-title">02</div>
+        <div class="stage-description">Звонок нашего сотрудника для уточнения информации</div>
+    </div>
+    <div class="stage">
+        <div class="stage-title_2">03</div>
+        <div class="stage-description">Подготовка к ремонту оборудования</div>
+    </div>
+    <div class="stage">
+        <div class="stage-title_1">04</div>
+        <div class="stage-description">Ремонт техники</div>
+    </div>
+    <div class="stage">
+        <div class="stage-title_2">05</div>
+        <div class="stage-description">Готовое отремонтированное оборудование</div>
+    </div>
+    <div class="logo"><img src="{{ url_for('static', filename='img/logo.PNG') }}"></div>
+  </div>
+  <div id="videoThumbnail" style="cursor:pointer;">
+    <img src="{{ url_for('static', filename='img/first_video.mp4') }}" width="560" height="315">
+    <img src="{{ url_for('static', filename='img/second_video.mp4') }}" width="560" height="315">
+    <img src="{{ url_for('static', filename='img/third_video.mp4') }}" width="560" height="315">
+  </div>
+  <!-- Модальное окно -->
+  <div id="myModal" class="modal">
+    <br>
+    <div class="description">Примеры наших работ</div>
+    <!-- Содержимое модального окна -->
+    <div class="modal-content">
+      <iframe width="500" height="315" src="{{ url_for('static', filename='img/first_video.mp4') }}" frameborder="0" allowfullscreen></iframe>
+      <iframe width="500" height="315" src="{{ url_for('static', filename='img/second_video.mp4') }}" frameborder="0" allowfullscreen></iframe>
+      <iframe width="500" height="315" src="{{ url_for('static', filename='img/third_video.mp4') }}" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/open_video.js') }}" defer></script>
+  <!-- Модальное окно -->
+  <div id="myModal_two" class="modal_two">
+    <!-- Контент модального окна -->
+    <div class="modal-content-two">
+      <span class="close">&times;</span>
+      <form id="serviceForm">
+        <label for="fullName" class="fullName">ФИО:</label>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+        <label for="phoneNumber" class="phoneNumber">Номер телефона:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+        <div class="f_set">
+          <legend>Выберите услуги:</legend>
+          <label><input type="checkbox" name="service" value="1"> Ремонт Плунжерных насосов и Редукторов всей линейки СИН от 84 000,00</label><br>
+          <label><input type="checkbox" name="service" value="2"> Ремонт и восстановление Клапанных коробок СИН от 28 000,00</label><br>
+          <label><input type="checkbox" name="service" value="3"> Расточка и установка накладок от 75 000,00</label><br>
+          <label><input type="checkbox" name="service" value="4"> Замена эксцентриков коренного вала насоса СИН от 80 000,00</label><br>
+          <label><input type="checkbox" name="service" value="5"> Центровка кривошипного-шатунного механизма от 45 000,00</label><br>
+          <label><input type="checkbox" name="service" value="6"> Покраска Плунжерных насосов и Редукторов всей линейки СИН от 15 000,00</label><br>
+          </div>
+        <input type="submit" value="Отправить">
+      </form>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/order_acceptance.js') }}" defer></script>
+  <footer>
+        <p>ВТК &copy; 2023-2024</p>
+    </footer>
+    </div>
+</div>
+</body>
+</html>

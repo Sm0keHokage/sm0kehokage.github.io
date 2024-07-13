@@ -1,0 +1,707 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.image {
+  width: 10%;
+  height: auto;
+}
+
+
+.logo-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  background-image: url("../img/gold.jpg");
+    background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button_first {
+  position: absolute;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 10%;
+  left: 15%;
+  top: 25%;
+  cursor: pointer;
+  color: #FFF;
+  background: #bbbbbb;
+  transition: all 0.3s;
+}
+.button_first span {
+  transition: all 0.3s;
+}
+
+.button_first::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+
+.button_first:hover span{
+  letter-spacing: 2px;
+}
+
+.button_first:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.button_first::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.button_first:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+.button_second {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 12%;
+  left: 31%;
+  cursor: pointer;
+  color: #FFF;
+  transition: all 0.5s;
+  position: absolute;
+  background: #bbbbbb;
+  top: 25%;
+}
+
+.button_second span {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.button_second::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.button_second::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+
+.button_second:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.button_second:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}
+
+
+.button_third {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 12%;
+  left: 49%;
+  cursor: pointer;
+  color: #FFF;
+  transition: all 0.5s;
+  position: absolute;
+  background: #bbbbbb;
+  top: 25%;
+}
+.button_third::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255,255,255,0.1);
+  transition: all 0.3s;
+}
+
+.button_third:hover::before {
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.button_third::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.5);
+  transform: scale(1.2,1.2);
+}
+.button_third:hover::after {
+  opacity: 1;
+  transform: scale(1,1);
+}
+
+.button_fourth {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 12%;
+  left: 67%;
+  cursor: pointer;
+  color: #FFF;
+  transition: all 0.5s;
+  position: absolute;
+  background: #bbbbbb;
+  top: 25%;
+}
+
+.button_fourth span {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.button_fourth::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+.button_fourth::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.1);
+}
+
+.button_fourth:hover::before {
+  transform: rotate(-45deg);
+  background-color: rgba(255,255,255,0);
+}
+.button_fourth:hover::after {
+  transform: rotate(45deg);
+  background-color: rgba(255,255,255,0);
+}
+
+.button_fifth {
+  position: absolute;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 10%;
+  left: 85%;
+  top: 25%;
+  cursor: pointer;
+  color: #FFF;
+  background: #bbbbbb;
+  transition: all 0.3s;
+}
+.button_fifth span {
+  transition: all 0.3s;
+}
+
+.button_fifth::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+
+.button_fifth:hover span{
+  letter-spacing: 2px;
+}
+
+.button_fifth:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+.button_fifth::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.button_fifth:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+
+/* слайдеры */
+.slider {
+  width: 85%;
+  position: relative;
+  left: 15%;
+  margin-bottom: 50px;
+
+}
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.slides::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* Скрываем скроллбар */
+}
+.slide {
+  scroll-snap-align: start;
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.buttons {
+  position: relative;
+  bottom: 600px;
+  scale: 0.5;
+}
+
+.prev {
+  cursor: pointer;
+
+  background-color: transparent;
+  margin: 0 10px;
+  border: none;
+  position:absolute;
+  left: -85%;
+}
+
+.next {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin: 0 30%;
+  left: 85%;
+  position: absolute;
+}
+
+
+/* Стиль модального окна */
+.modal {
+
+  position: relative; /* Оставаться на месте при прокрутке */
+  z-index: 1; /* Сидеть поверх */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включить прокрутку, если нужно */
+  background-color: rgb(0,0,0); /* Цвет фона */
+  background-color: rgba(0,0,0,0.4); /* Черный с непрозрачностью */
+}
+
+/* Стиль содержимого модального окна */
+.modal-content {
+  display: flex; /* Использовать flexbox для выравнивания дочерних элементов */
+  justify-content: space-around; /* Распределить пространство вокруг элементов */
+  align-items: center; /* Центрировать элементы по вертикали */
+  flex-wrap: wrap;
+  background-color: transparent;
+  margin: 2% auto; /* 15% сверху и по центру */
+  padding: 10px;
+  border: 1px solid #888;
+  width: 90%; /* Можно изменить на нужную ширину */
+}
+
+.description {
+  display: flex;
+  color: black; /* Изменение цвета текста на синий */
+  font-size: 32px; /* Изменение размера шрифта */
+  justify-content: space-around; /* Распределить пространство вокруг элементов */
+  align-items: center;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Стиль для изображения видео, которое будет открывать модальное окно */
+#videoThumbnail {
+  cursor: pointer; /* Изменить курсор на указатель */
+  display: none;
+  /* Добавьте любые дополнительные стили для изображения здесь */
+}
+
+.modal_two {
+  display: none; /* Скрыть модальное окно по умолчанию */
+  position: fixed; /* Оставаться на месте при прокрутке */
+  z-index: 1; /* Сидеть на верху */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включить прокрутку, если нужно */
+  background-color: rgb(0,0,0); /* Цвет фона */
+  background-color: rgba(0,0,0,0.6); /* Черный с небольшой прозрачностью */
+
+}
+
+/* Стили для контента модального окна */
+.modal-content-two {
+  width: 80%;
+  background-color: #c0c0c0;
+  margin: 15% auto; /* 15% от верха и по центру */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px; /* Радиус закругления углов *
+  /* Можно изменить на более узкий или широкий */
+}
+
+.f_set {
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-radius: 15px;
+    background-color: #F0F0F0;
+    border-style: groove;
+    border-color: rgb(192, 192, 192);
+    border-image: initial;
+    font-size:18px;
+}
+
+
+input[type="submit"] {
+  font-size:28px;
+  border-radius: 15px;
+  margin-top: 20px; /* Отступ сверху */
+  cursor: pointer; /* Курсор в виде руки */
+  padding: 15px 20px; /* Отступы */
+  display: block; /* Блочный элемент */
+  margin: 20px auto; /* Центрирование */
+  width:80%;
+  border: none; /* Без границы */
+}
+
+/* Кнопка закрыть (x) */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+footer {    background-color: rgba(0, 0, 0, 0.4);
+            color: black;
+            text-align: center;
+            padding: 10px;
+
+        }
+.info_about_company {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+
+}
+.all_fon {
+ background-image: url("../img/silver.jpg");
+ background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+}
+.info_about_company h1{
+  text-align: center;
+  margin:auto;
+}
+.info {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.container_info_about_company {
+margin-bottom: 50px;
+background-color: rgba(0, 0, 0, 0.3);
+}
+.container_info_about_company ul{
+
+  padding: 20px;
+}
+.info_two {
+  margin-bottom: 20px;
+}
+.info_three {
+  margin-bottom: 20px;
+}
+.stages {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.stages_of_work {
+  display: flex;
+  color: black; /* Изменение цвета текста на синий */
+  font-size: 32px; /* Изменение размера шрифта */
+  justify-content: space-around; /* Распределить пространство вокруг элементов */
+  align-items: center;
+  margin-bottom:20px;
+}
+.stage {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: ani 0.5s forwards;
+        }
+        .stage:not(:first-child) {
+            animation-delay: 0.5s;
+        }
+        @keyframes ani {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+
+        }
+        .stage-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .stage-description {
+            font-size: 1em;
+            color: #666;
+            text-align: center;
+        }
+        .stage-title_1 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 60px;
+            line-height: 1;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .stage-title_2 {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 25px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+.logo {
+  width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+}
+.logo img {
+max-width: 20%;
+margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent; /* Устанавливаем прозрачный фон */
+            height: auto;
+
+}
+
+@media (min-width: 1200px) {
+  display: flex;
+  flex-wrap: nowrap;
+
+  input[type="tel"] {
+    padding-block: 1px;
+    padding-inline: 2px;
+    border-radius: 5px;
+    width:22.5%;
+    font-size:18px;
+    height:50px;
+  }
+  input[type="tel"] {
+    padding-block: 1px;
+    padding-inline: 2px;
+    border-radius: 5px;
+    width:22.5%;
+    font-size:18px;
+    height:50px;
+  }
+  .phoneNumber {
+    font-size:18px;
+  }
+  .fullName {
+    font-size:18px;
+  }
+  input[type="text"] {
+    padding-block: 1px;
+    padding-inline: 2px;
+    border-radius: 5px;
+    width:30%;
+    font-size:18px;
+    height:50px;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .logo-container {
+    display: flex; /* Активируем flexbox для контейнера */
+    align-items: center; /* Выравниваем элементы по вертикали */
+    justify-content: center; /* Выравниваем элементы по горизонтали */
+    padding-bottom: 30px;
+  }
+  .image {
+    width: 20%; /* Увеличено с 15% до 50% */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 5px;
+  }
+  .text {
+    width: 60%;
+    font-size: 2.7vw; /* Увеличен размер шрифта */
+    margin-left: 15%;
+    overflow: auto;
+    margin-bottom: 20px;
+  }
+  .logo-container {
+    display: block;
+    width: 100%;
+    justify-content: space-between;
+    overflow: auto;
+    padding: 10px;
+
+  }
+  .button_first, .button_second, .button_third, .button_fourth, .button_fifth {
+    width: 80%;
+    left: 10%;
+    top: auto;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .slider {
+    position: relative;
+    width: 92.5%; /* Слайдер занимает всю ширину экрана */
+    left: 7.5%; /* Сброс смещения слайдера */
+  }
+  .slide img {
+    width: 90%; /* Занимает всю ширину слайда */
+    height: auto; /* Сохраняет пропорции изображения */
+    object-fit: cover; /* Обрезает изображение, чтобы оно заполнило контейнер */
+  }
+  .logo img {
+    max-width: 80%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent; /* Устанавливаем прозрачный фон */
+            height: auto;
+
+}
+  .buttons {
+    display: none;
+  }
+  .description {
+    display: flex;
+    color: black;
+    font-size: 22px;
+}
